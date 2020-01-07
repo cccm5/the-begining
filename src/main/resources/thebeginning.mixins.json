@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "net.fabricmc.example.mixin",
+  "package": "dev.cccm5.thebeginning.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "thebeginning",
   "version": "${version}",
 
   "name": "Example Mod",
@@ -19,11 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleModKt::init"
+      "dev.cccm5.thebeginning.ExampleModKt::init"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "thebeginning.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.7.1",
