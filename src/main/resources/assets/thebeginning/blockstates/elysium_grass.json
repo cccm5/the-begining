@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      { "model": "thebeginning:block/elysium_grass"  },
+      { "model": "thebeginning:block/elysium_grass" , "y": 90 },
+      { "model": "thebeginning:block/elysium_grass" , "y": 180 },
+      { "model": "thebeginning:block/elysium_grass" , "y": 270 }
+    ]
+  }
+}
