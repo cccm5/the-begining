@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      { "model": "thebeginning:block/mud_brick"  },
+      { "model": "thebeginning:block/mud_brick_1"  },
+      { "model": "thebeginning:block/mud_brick_2"  },
+      { "model": "thebeginning:block/mud_brick_3"  }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "thebeginning:block/mud_brick_2"
+  }
+}
+

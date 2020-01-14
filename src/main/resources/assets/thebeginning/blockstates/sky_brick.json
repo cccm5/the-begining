@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      { "model": "thebeginning:block/sky_brick"  },
+      { "model": "thebeginning:block/sky_brick_1"  },
+      { "model": "thebeginning:block/sky_brick_2"  }
+    ]
+  }
+}

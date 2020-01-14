@@ -21,14 +21,14 @@ object WorldRegistry {
 //        }.factory(::Eleysium).skyLight(true).buildAndRegister(id("eleysium`"))
     private fun getGenerator(world: World): CavesChunkGenerator {
         val cavesChunkGeneratorConfig = ChunkGeneratorType.CAVES.createSettings() as CavesChunkGeneratorConfig
-        cavesChunkGeneratorConfig.defaultBlock = BlockRegistry.ELYSIUM_STONE.defaultState
+        cavesChunkGeneratorConfig.defaultBlock = BlockRegistry.ELYSIUM_STONE_BLOCK.defaultState
         cavesChunkGeneratorConfig.defaultFluid = Blocks.WATER.defaultState
         return ChunkGeneratorType.CAVES.create(world, BiomeSourceType.FIXED.applyConfig((BiomeSourceType.FIXED.getConfig(world.levelProperties) as FixedBiomeSourceConfig).setBiome(BiomeRegistry.TITANIC_PLAINS)), cavesChunkGeneratorConfig)
     }
 
     private fun getOtherGenerator(world: World): OverworldChunkGenerator {
         val gen = ChunkGeneratorType.SURFACE.createSettings()
-        gen.defaultBlock = BlockRegistry.ELYSIUM_STONE.defaultState
+        gen.defaultBlock = BlockRegistry.ELYSIUM_STONE_BLOCK.defaultState
         gen.defaultFluid = Blocks.WATER.defaultState
         return ChunkGeneratorType.SURFACE.create(world, BiomeSourceType.FIXED.applyConfig((BiomeSourceType.FIXED.getConfig(world.levelProperties) as FixedBiomeSourceConfig).setBiome(BiomeRegistry.TITANIC_PLAINS)), gen)
     }
@@ -36,7 +36,7 @@ object WorldRegistry {
     val ELYSIUM: FabricDimensionType = FabricDimensionType.builder().skyLight(true).factory { world, type ->
         DimensionBuilder()
             .hasThickFog(false)
-            .fogColor{ _, _ -> Vec3d(255.0/255, 248.0/255, 199.0/255)}
+            .fogColor{ _, _ -> Vec3d(192.0/255, 209.0/255, 204.0/255)}
 //            .setChunkGenerator(ElysiumChunkGeneratorType.INSTANCE.create(world, ElysiumBiomeSource(), ElysiumChunkGeneratorConfig()))
             .setChunkGenerator(getOtherGenerator(world))
             .visibleSky(false)

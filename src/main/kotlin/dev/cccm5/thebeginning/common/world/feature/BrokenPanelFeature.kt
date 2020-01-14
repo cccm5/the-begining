@@ -13,7 +13,6 @@ import java.util.*
 import java.util.function.Function
 import kotlin.math.cos
 import kotlin.math.sin
-import kotlin.streams.toList
 
 class BrokenPanelFeature(config: Function<Dynamic<*>, out DefaultFeatureConfig>): Feature<DefaultFeatureConfig>(config)  {
     override fun generate(
@@ -61,7 +60,7 @@ class BrokenPanelFeature(config: Function<Dynamic<*>, out DefaultFeatureConfig>)
             return false
         }
         for(torusPos in filtered){
-            world.setBlockState(torusPos, BlockRegistry.SOUL_STEEL.defaultState, 3)
+            world.setBlockState(torusPos, BlockRegistry.SOUL_STEEL_BLOCK.defaultState, 3)
         }
         println("Generated panel at $center")
         return true

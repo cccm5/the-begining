@@ -2,21 +2,14 @@ package dev.cccm5.thebeginning.common.world.feature
 
 import com.mojang.datafixers.Dynamic
 import dev.cccm5.thebeginning.common.registry.BlockRegistry
-import net.fabricmc.loader.util.sat4j.core.Vec
-import net.minecraft.block.Blocks
-import net.minecraft.client.util.math.Vector3d
-import net.minecraft.client.util.math.Vector3f
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.Vec3d
 import net.minecraft.util.math.Vec3i
-import net.minecraft.world.Heightmap
 import net.minecraft.world.IWorld
 import net.minecraft.world.gen.chunk.ChunkGenerator
 import net.minecraft.world.gen.chunk.ChunkGeneratorConfig
 import net.minecraft.world.gen.feature.DefaultFeatureConfig
 import net.minecraft.world.gen.feature.Feature
-import java.lang.Math.cos
-import java.lang.Math.sin
 import java.util.*
 import java.util.function.Function
 import kotlin.random.asKotlinRandom
@@ -91,7 +84,7 @@ class BrokenArchFeature(config: Function<Dynamic<*>, out DefaultFeatureConfig>):
             //plane-side test
             if(torusPos.y > center.y && normal.dot(torusPos.subtract(center)) < 0)
                 continue
-            world.setBlockState(torusPos, BlockRegistry.SOUL_STEEL.defaultState, 3)
+            world.setBlockState(torusPos, BlockRegistry.SOUL_STEEL_BLOCK.defaultState, 3)
         }
         return true
     }
